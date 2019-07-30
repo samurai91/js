@@ -12,15 +12,14 @@ let appData = {
   savings: false
 };
 
-let expenses = [
-  'Введите обязательную статью расходов в этом месяце',
-  'Во сколько обойдется?'
-];
-let i = 0;
+let firstQuestion = prompt('Введите обязательную статью расходов в этом месяце'),
+    firstLet  = prompt('Во сколько обойдется?');
 
-for (i = 0; i < 2; i++) {
-  prompt(expenses[0]);
-  prompt(expenses[1]);
-}
+appData.expenses.firstQuestion = firstLet;
+
+let secondQuestion = prompt('Введите обязательную статью расходов в этом месяце'),
+    secondLet  = prompt('Во сколько обойдется?');
+
+appData.expenses.secondQuestion = secondLet;
 
 alert("Ваш бюджет на 1 день: " + (money / 30) );
